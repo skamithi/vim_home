@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/skamithi/Development/Git/sasina/app/controllers'
+let g:netrw_dirhist_2='/home/skamithi/devel/ansible/restore_pc/roles/default/main.yml'
+let g:netrw_dirhist_3='/etc/vmbuilder'
+let g:netrw_dirhist_4='/home/skamithi/devel/ansible/restore_pc'
+let g:netrw_dirhist_5='/home/skamithi/devel/ansible/ptm_demo/roles/setup_ptm_demo_vms'
+let g:netrw_dirhist_6='/home/skamithi/devel/git/sasina/app/assets/stylesheets/media-phone-portrait'
+let g:netrw_dirhist_7='/home/skamithi/devel/git/sasina/app/assets/stylesheets/media-tablet'
+let g:netrw_dirhist_8='/home/skamithi'
