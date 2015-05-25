@@ -1,21 +1,6 @@
-[submodule "vim-fugitive"]
-	path = vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "bundle/vim-obsession"]
 	path = bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/wycats/nerdtree
-[submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim
-[submodule "ack.vim"]
-	path = ack.vim
-	url = https://github.com/mileszs/ack.vim
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = https://github.com/mileszs/ack.vim
