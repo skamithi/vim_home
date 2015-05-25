@@ -4,11 +4,10 @@ call pathogen#helptags()
 syntax on
 filetype plugin indent on
 set number
-set hls
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set textwidth=80
+set textwidth=85
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
@@ -34,20 +33,20 @@ autocmd User Rails silent! Rnavcommand factory spec/support/factories/ -glob=**/
 " on the spec/scenario under the cursor.
 
 function! RailsScriptIfExists(name)
-"  execute ":Rvm use" "
+  execute ":Rvm use"
   return  a:name
 endfunction
 
 function! RunSpec(args)
-	let spec = RailsScriptIfExists("zeus test --color -f d")
+	let spec = RailsScriptIfExists("rspec --color -f d")
 	let cmd = spec . " " . a:args . " " . @%
   execute ":! echo " . cmd . " && " . cmd
 endfunction
 
 function! RunCucumber(args)
-	let cucumber = RailsScriptIfExists("zeus cucumber")
+	let cucumber = RailsScriptIfExists("cucumber")
 	let cmd = cucumber . " " . @% . a:args
-  execute ":! echo " . cmd . " && " . cmd
+	execute ":! echo " . cmd . " && " . cmd
 endfunction
 
 function! RunTestFile(args)
@@ -66,21 +65,18 @@ function! RunTest(args)
   end
 endfunction
 
-function! RunCakeFile(args)
-	let cmd = "cake test"
-  execute ":! echo " . cmd . " && " . cmd
+function! RunNose(args)
+  let cmd = 'tox'
+  execute ":!" .cmd . " &&"
 endfunction
 
 map <Leader>; :call RunTest("")<CR>
 map <Leader>' :call RunTestFile("")<CR>
-map <Leader>c :call RunCakeFile("")<CR>
+map <Leader>n :call RunNose("")<CR>
+
 " Removes trailing spaces
 function! TrimWhiteSpace()
- " don't strip on these filetypes
-    if &ft =~ 'modula2\|markdown'
-        return
-    endif
-    %s/\s\+$//e
+     %s/\s\+$//e
 endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
@@ -90,15 +86,49 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
-"Save coffeescript files as JS files automatically using the save option
-"autocmd BufWritePost,FileWritePost *.coffee silent !make
-
-
 "always show filename at the bottom of the terminal
 set modeline
 set ls=2
 
-set tags+=./tags
-map <leader>, :!ctags -R --exclude=.git --exclude=logs --exclude=doc .<CR>
+" enable python module plugin
+let g:pymode = 1
+let g:pymode_rope = 0
+let g:pymode_folding = 1
+let g:pymode_options_max_line_length = 90
 
-au BufRead,BufNewFile *.rb setlocal tags+=~/.vim/tags/ruby_and_gems
+" remove big red line that shows line length border
+autocmd BufRead *.py setlocal colorcolumn=0
+
+" don't prompt when saving session to do an session autosave
+" let g:session_autosave = 'yes'
+" let g:session_autoload = 1
+" let g:session_directory = getcwd()
+" let g:session_autosave_periodic = 10
+
+"let g:syntastic_python_checkers = ['pylint']
+"let g:pymode_doc = 0
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set textwidth=80
+
+map <tab> <c-w>
+map <tab><tab> <c-w><c-w>
+
+" indent xml files like html files..etc...using gg=G
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+"Map tab to autocomplete option
+":imap <tab> <c-x><c-o>
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-a>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"
+" " If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+"
+"
+let NERDTreeIgnore = ['\.pyc$']
