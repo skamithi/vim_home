@@ -7,3 +7,6 @@
 [submodule "bundle/nerdtree.vim"]
 	path = bundle/nerdtree.vim
 	url = https://github.com/wycats/nerdtree
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim
