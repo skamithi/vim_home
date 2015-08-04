@@ -93,7 +93,7 @@ set ls=2
 " enable python module plugin
 let g:pymode = 1
 let g:pymode_rope = 0
-let g:pymode_folding = 1
+let g:pymode_folding = 0
 let g:pymode_options_max_line_length = 90
 
 " remove big red line that shows line length border
