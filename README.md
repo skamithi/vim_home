@@ -6,6 +6,7 @@ pathogens](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodule
 ## Usage
 
 ```
+mv ~/.vim ~/vim.old
 git clone http://github.com/skamithi/vim_home ~/vim
 cd ~/.vim
 cp vimrc ~/.vimrc
