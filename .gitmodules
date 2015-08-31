@@ -16,3 +16,6 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = https://github.com/klen/python-mode
+[submodule "bundle/vim-ansible"]
+	path = bundle/vim-ansible
+	url = https://github.com/chase/vim-ansible-yaml
