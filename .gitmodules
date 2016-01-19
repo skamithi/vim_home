@@ -31,3 +31,6 @@
 [submodule "bundle/vim-jade"]
 	path = bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade
+[submodule "bundle/vim-mocha"]
+	path = bundle/vim-mocha
+	url = https://github.com/geekjuice/vim-mocha
