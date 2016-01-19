@@ -34,3 +34,6 @@
 [submodule "bundle/vim-mocha"]
 	path = bundle/vim-mocha
 	url = https://github.com/geekjuice/vim-mocha
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
