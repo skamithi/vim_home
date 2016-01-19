@@ -129,6 +129,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "
 " " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
-"
-"
+
 let NERDTreeIgnore = ['\.pyc$']
+
+let g:mocha_coffe_command = "!node_modules/mocha/bin/mocha --require coffee-script/register --compilers coffee:coffee-script/register  --require co-mocha {spec}"
+map <Leader>m :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
