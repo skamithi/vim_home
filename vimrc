@@ -132,7 +132,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let NERDTreeIgnore = ['\.pyc$']
 
-let g:mocha_coffe_command = "!node_modules/mocha/bin/mocha --require coffee-script/register --compilers coffee:coffee-script/register  --require co-mocha {spec}"
+let g:mocha_coffee_command = "!node_modules/mocha/bin/mocha --require coffee-script/register --compilers coffee:coffee-script/register  --require co-mocha {spec}"
 map <Leader>m :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
