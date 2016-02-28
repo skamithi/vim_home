@@ -12,9 +12,7 @@ pathogens](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodule
 ```
 sudo apt-get install vim-nox
 mv ~/.vim ~/vim.old
-git clone http://github.com/skamithi/vim_home ~/.vim
+git clone http://github.com/skamithi/vim_home ~/.vim --recursive
 cd ~/.vim
 cp vimrc ~/.vimrc
-git submodule init
-git submodule update
 ```
