@@ -137,3 +137,9 @@ map <Leader>m :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+" To fold HTML
+set foldenable
+set foldmethod=indent
+nnoremap <space> za
+set foldlevelstart=3
