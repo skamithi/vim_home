@@ -43,3 +43,6 @@
 [submodule "bundle/MatchTagAlways"]
 	path = bundle/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways
+[submodule "bundle/vim-jinja2-syntax"]
+	path = bundle/vim-jinja2-syntax
+	url = https://github.com/glench/vim-jinja2-syntax
