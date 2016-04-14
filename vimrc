@@ -139,7 +139,13 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " To fold HTML
-set foldenable
-set foldmethod=indent
-nnoremap <space> za
-set foldlevelstart=3
+" set foldenable
+" set foldmethod=indent
+" nnoremap <space> za
+" set foldlevelstart=3
+
+" autocreate directories in file path
+if has("autocmd")
+  autocmd BufWritePre * :silent !mkdir -p %:p:h
+end
+
