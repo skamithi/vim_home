@@ -46,3 +46,6 @@
 [submodule "bundle/vim-jinja2-syntax"]
 	path = bundle/vim-jinja2-syntax
 	url = https://github.com/glench/vim-jinja2-syntax
+[submodule "bundle/ps1"]
+	path = bundle/ps1
+	url = https://github.com/pprovost/vim-ps1
