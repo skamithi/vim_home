@@ -7,7 +7,7 @@ set number
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set textwidth=85
+set textwidth=80
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 
@@ -107,11 +107,6 @@ autocmd BufRead *.py setlocal colorcolumn=0
 
 "let g:syntastic_python_checkers = ['pylint']
 "let g:pymode_doc = 0
-
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set textwidth=80
 
 map <tab> <c-w>
 map <tab><tab> <c-w><c-w>
