@@ -49,3 +49,6 @@
 [submodule "bundle/ps1"]
 	path = bundle/ps1
 	url = https://github.com/pprovost/vim-ps1
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform
